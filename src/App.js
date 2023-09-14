@@ -13,7 +13,6 @@ import Header from "./components/Header";
 function App() {
   return (
     <Router>
-      { }
       <div className="">
         { <Header />}
         <Routes>          

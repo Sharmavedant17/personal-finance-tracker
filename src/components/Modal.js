@@ -102,8 +102,8 @@ const Modal = ({ setIsModalOpen }) => {
             <option value="" disabled>
               Select Type
             </option>
-            <option value="expense">Expense</option>
             <option value="income">Income</option>
+            <option value="expense">Expense</option>
           </select>
           <br />
 
