@@ -5,7 +5,7 @@ import TableBody from './TableBody';
 
 const Table = ({ financeData }) => {
     const userName = localStorage.getItem("username");
-    const filterData = financeData.financeList.filter((item, idx) => item.userName === userName);
+    const filterData = financeData && financeData.financeList.filter((item, idx) => item.userName === userName);
     console.log(filterData);
     const [filteredData, setFilteredData] = useState(filterData);
     const [sortedData, setSortedData] = useState([]);

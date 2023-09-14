@@ -1,7 +1,7 @@
 const TableBody = ({sortedData}) => {
     return(
           <tbody>
-            {sortedData.length > 0 &&
+            {sortedData && sortedData.length > 0 &&
               sortedData.map((item, index) => (
                 <tr key={index}>
                   <td>{item.date}</td>

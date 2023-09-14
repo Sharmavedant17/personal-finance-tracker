@@ -8,9 +8,9 @@ const TableHead = ({filterOptions, handleSort}) => {
                   className="sort-btn"
                   onClick={() => handleSort('dateSort')}
                 >
-                  {filterOptions.dateSort === 'asc'
+                  {filterOptions && filterOptions.dateSort === 'asc'
                     ? 'asc'
-                    : filterOptions.dateSort === 'desc'
+                    : filterOptions && filterOptions.dateSort === 'desc'
                     ? 'desc'
                     : 'click to sort'}
                 </button>
@@ -21,9 +21,9 @@ const TableHead = ({filterOptions, handleSort}) => {
                   className="sort-btn"
                   onClick={() => handleSort('typeSort')}
                 >
-                  {filterOptions.typeSort === 'asc'
+                  {filterOptions &&  filterOptions.typeSort === 'asc'
                     ? 'asc'
-                    : filterOptions.typeSort === 'desc'
+                    : filterOptions && filterOptions.typeSort === 'desc'
                     ? 'desc'
                     : 'click to sort'}
                 </button>
@@ -35,9 +35,9 @@ const TableHead = ({filterOptions, handleSort}) => {
                   className="sort-btn"
                   onClick={() => handleSort('categorySort')}
                 >
-                  {filterOptions.categorySort === 'asc'
+                  {filterOptions && filterOptions.categorySort === 'asc'
                     ? 'asc'
-                    : filterOptions.categorySort === 'desc'
+                    : filterOptions && filterOptions.categorySort === 'desc'
                     ? 'desc'
                     : 'click to sort'}
                 </button>
@@ -48,9 +48,9 @@ const TableHead = ({filterOptions, handleSort}) => {
                   className="sort-btn"
                   onClick={() => handleSort('amountSort')}
                 >
-                  {filterOptions.amountSort === 'asc'
+                  {filterOptions && filterOptions.amountSort === 'asc'
                     ? 'asc'
-                    : filterOptions.amountSort === 'desc'
+                    : filterOptions && filterOptions.amountSort === 'desc'
                     ? 'desc'
                     : 'click to sort'}
                 </button>

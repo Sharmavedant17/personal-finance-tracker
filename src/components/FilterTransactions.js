@@ -12,7 +12,7 @@ const FilterTransactions = ({filterOptions, handleFilterChange}) => {
           <label className="margin-rt">Date:</label>
           <input
             type="date"
-            value={filterOptions.date}
+            value={filterOptions && filterOptions.date}
             onChange={(e) => handleFilterChange('date', e.target.value)}
           />
         </div>
@@ -20,7 +20,7 @@ const FilterTransactions = ({filterOptions, handleFilterChange}) => {
           <label className="margin-rt">Amount:</label>
           <input
             type="number"
-            value={filterOptions.amount}
+            value={filterOptions && filterOptions.amount}
             onChange={(e) => handleFilterChange('amount', e.target.value)}
             placeholder="Enter Amount"
           />
@@ -28,7 +28,7 @@ const FilterTransactions = ({filterOptions, handleFilterChange}) => {
         <div className="filter-item">
           <label className="margin-rt">Category:</label>
           <select
-            value={filterOptions.category}
+            value={filterOptions && filterOptions.category}
             onChange={(e) => handleFilterChange('category', e.target.value)}
           >
             <option value="">All</option>
@@ -42,7 +42,7 @@ const FilterTransactions = ({filterOptions, handleFilterChange}) => {
         <div className="filter-item">
           <label className="margin-rt">Type:</label>
           <select
-            value={filterOptions.type}
+            value={filterOptions && filterOptions.type}
             onChange={(e) => handleFilterChange('type', e.target.value)}
           >
             <option value="">All</option>
