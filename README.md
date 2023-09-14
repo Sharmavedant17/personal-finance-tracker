@@ -27,7 +27,7 @@ Follow below instructions to install and run project
 ### 2- Check node version and install node version 16 (if not present)
 
 ```bash
-  node-v
+  node -v
 ```
 
 ### 3- Install Project dependencies.
