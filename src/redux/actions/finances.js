@@ -3,7 +3,6 @@ import { DELETE_FINANCE } from "../action-types/finances";
 
 
 export const addNew =(data) => {
-    console.log("data::", data)
     return{
         type: ADD_NEW,
         data,

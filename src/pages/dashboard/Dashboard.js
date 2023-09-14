@@ -4,7 +4,7 @@ const Dashboard = ({data}) => {
     const finalData = [];
     const financeData = data && data.split("_");
     financeData && financeData.length > 0 && financeData.forEach(element => {
-        const res = element.split("-");
+        const res = element.split("=");
         finalData.push(res[1])
     });
 

@@ -27,15 +27,12 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     setError()
     e.preventDefault();
-    console.log('Sign-Up submitted:', userName, email, password);
     signUp({
       username: userName, email, password
     }).then((res) => {
-      console.log(res);
        localStorage.setItem("username", res.data.user.username);
       navigate("/analytics");
     }).catch((err) => {
-      console.log("Error" , err)
       if(err && err.response && err.response.data && err.response.data.message){
         setError(err.response.data.message)
       }else{

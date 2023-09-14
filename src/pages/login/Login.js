@@ -20,18 +20,15 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted:', userName, password);
     if (userName === "admin") {
         localStorage.setItem("username", "admin");
       navigate("/analytics");
     }
     logIn({username: userName, password})
     .then((res) => {
-      console.log("login::", res);
       localStorage.setItem("username", res.data.user.username);
       navigate("/analytics");
     }).catch((err) => {
-      console.log("Error" , err)
       if(err && err.response && err.response.data && err.response.data.message){
         setError(err.response.data.message)
       }else{

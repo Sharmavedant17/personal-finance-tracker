@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location.pathname === '/history', location.pathname);
   const userName = localStorage.getItem("username");
 
   useEffect(() => {
@@ -55,7 +54,7 @@ const Header = () => {
           </li>
            <li className={location.pathname === "/dashboard" ? "active" : ""}>
           
-            <a href={`/dashboard/income-${totalIncome}_expense-${totalExpenses}_total-${totalIncome - totalExpenses}`}>Dashboard</a>
+            <a href={`/dashboard/income=${totalIncome}_expense=${totalExpenses}_total=${totalIncome - totalExpenses}`}>Dashboard</a>
           </li>
         </ul>
         <div className="user-name">
