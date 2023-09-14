@@ -24,20 +24,25 @@ Follow below instructions to install and run project
   git colne https://github.com/Sharmavedant17/personal-finance-tracker.git
   cd personal-finance-tracker
 ```
+### 1- Check node version and install node version 16 (if not present)
 
-### 2- Install Project dependencies.
+```bash
+  node-v
+```
+
+### 3- Install Project dependencies.
 
 ```bash
   npm i
 ```
 
-### 3- Create Client build
+### 4- Create Client build
 
 ```bash
   npm run build
 ```
 
-### 4- Navigate to server folder and start the server
+### 5- Navigate to server folder and start the server
 
 ```bash
   cd server
