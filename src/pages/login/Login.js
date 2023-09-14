@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './login.css';
 import { useNavigate } from "react-router-dom";
-import { signIn } from '../../api';
+import { logIn } from '../../api';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,10 +21,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted:', userName, password);
-    signIn({username: userName, password})
+    logIn({username: userName, password})
     .then((res) => {
       console.log("login::", res);
-      localStorage.setItem("username", res.data.result.name);
+      localStorage.setItem("username", res.data.user.username);
       navigate("/analytics");
     }).catch((err) => {
       console.log("Error" , err)

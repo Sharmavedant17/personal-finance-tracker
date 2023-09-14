@@ -1,5 +1,5 @@
 
-import {categoryData} from '../utils/data'
+import {categoryData} from '../constants/constants'
 
 
 const FilterTransactions = ({filterOptions, handleFilterChange}) => {

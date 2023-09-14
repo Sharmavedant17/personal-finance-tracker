@@ -1,3 +1,13 @@
+export const options = {
+  plugins: {
+    legend: {
+      display: true,
+      position: 'bottom',
+    },
+  },
+};
+
+
 export const categoryData = [
     "Food",
   "Transportation",

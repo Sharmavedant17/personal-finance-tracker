@@ -9,7 +9,8 @@ const Dashboard = ({data}) => {
     });
 
     return(
-        <div style={{
+        <div>
+            <div style={{
             display: "flex",
             justifyContent: "space-evenly",
             marginTop: "30px"
@@ -64,6 +65,16 @@ const Dashboard = ({data}) => {
                     }}>{finalData[2]}</div>
             </div>
         </div>
+            <p style={{
+                        fontSize: "20px",
+                        marginTop: "65px",
+                        textAlign: "center"
+                        }}>
+                <a style={{fontWeight: "700",textDecoration: "underline", cursor: "pointer"}} href="/analytics">Click Here </a>
+                to go back
+            </p>
+        </div>
+        
     )
 }
 

@@ -32,7 +32,7 @@ const SignUp = () => {
       username: userName, email, password
     }).then((res) => {
       console.log(res);
-       localStorage.setItem("username", res.data.result.name);
+       localStorage.setItem("username", res.data.user.username);
       navigate("/analytics");
     }).catch((err) => {
       console.log("Error" , err)

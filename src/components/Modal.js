@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addNew } from '../redux/actions/finances';
-import {categoryData} from '../utils/data'
+import {categoryData} from '../constants/constants';
 
 const Modal = ({ setIsModalOpen }) => {
   const [amount, setAmount] = useState('');
@@ -9,17 +9,19 @@ const Modal = ({ setIsModalOpen }) => {
   const [category, setCategory] = useState('');
   const [date, setDate] = useState('');
   const [description, setDescription] = useState('');
-//   const [disable, setDisable] = useState(true);
+  const [disable, setDisable] = useState(true);
   const dispatch = useDispatch();
 
-//   const handleEnable = () => {
-//             if (amount && type && category && date && description) {
-//                 setDisable(false)
-//             }else {
-//                 setDisable(true)
-//             }
 
-//   }
+  useEffect(() => {
+    if (amount && type && category && date && description) {
+                setDisable(false)
+            }else {
+                setDisable(true)
+            }
+  }, [amount, type, category, date, description])
+
+
 
   const clearFinanceFormData = () => {
     setAmount('');
@@ -146,7 +148,7 @@ const Modal = ({ setIsModalOpen }) => {
             className="submit-btn"
             type="submit"
             onClick={handleSubmit}
-            //  disabled={disable}
+             disabled={disable}
           >
             Submit
           </button>
