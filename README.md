@@ -24,7 +24,7 @@ Follow below instructions to install and run project
   git colne https://github.com/Sharmavedant17/personal-finance-tracker.git
   cd personal-finance-tracker
 ```
-### 1- Check node version and install node version 16 (if not present)
+### 2- Check node version and install node version 16 (if not present)
 
 ```bash
   node-v
